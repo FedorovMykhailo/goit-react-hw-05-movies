@@ -13,12 +13,13 @@ const options = {
   }
 }
 
-axios.defaults.url = "https://api.themoviedb.org/3/";
-axios.defaults.headers = options.headers
+//axios.defaults.url = "https://api.themoviedb.org/3/";
+//axios.defaults.headers = options.headers
 
 export const getTrendMovies = async () => {
     try {
-        const movies = await axios.get("https://api.themoviedb.org/3/trending/all/day?language=en-US",options)
+        const movies = await axios.get("https://api.themoviedb.org/3/trending/all/day?language=en-US", options)
+        console.log(movies.data); 
         return movies.data.results
     } catch (error) {
         console.log(error);
