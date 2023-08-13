@@ -17,6 +17,7 @@ export const App = () => {
   const [trendMovies, setTrendMovies] = useState([])
   const [searchMovie, setSearchMovie] = useState([])
   const [searchParams, setSearchParams] = useSearchParams();
+  console.log(searchParams);
 
   useEffect(()=>{ handleTrendMovies()},[])
   
