@@ -2,11 +2,14 @@ import axios from "axios";
 
 //const API_KEY = "37c5294f36588c9cbaf23baced16cf0f";
 
+const KEY = 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzN2M1Mjk0ZjM2NTg4YzljYmFmMjNiYWNlZDE2Y2YwZiIsInN1YiI6IjY0ZDIzYzY1NTQ5ZGRhMDBjNTQwYWRmNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UvZYgf5pQep4y6mx_MJjs8qzNG2R9hnl7D9EB6jRj7Q';
+
+
 const options = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzN2M1Mjk0ZjM2NTg4YzljYmFmMjNiYWNlZDE2Y2YwZiIsInN1YiI6IjY0ZDIzYzY1NTQ5ZGRhMDBjNTQwYWRmNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UvZYgf5pQep4y6mx_MJjs8qzNG2R9hnl7D9EB6jRj7Q'
+    Authorization: KEY 
   }
 }
 
