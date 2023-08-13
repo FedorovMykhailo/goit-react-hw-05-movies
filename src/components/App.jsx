@@ -24,7 +24,7 @@ export const App = () => {
   const handleTrendMovies = async () => {
         try {
             const res = await getTrendMovies();
-            setTrendMovies(res)
+          setTrendMovies(res)
         } catch (error) {
             console.log(error); 
         }
@@ -39,6 +39,8 @@ export const App = () => {
             console.log(error); 
         } 
   }
+
+console.log(trendMovies);
 
   return (
     <div
