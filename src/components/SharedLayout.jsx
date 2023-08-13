@@ -9,7 +9,7 @@ const SharedLayout = () => {
         <Link to="/movies">Movie</Link>  
         </Header>
         <Suspense fallback={<div>Loading page...</div>}>
-        <Outlet />
+            <Outlet />
         </Suspense>
     </>)
 } 

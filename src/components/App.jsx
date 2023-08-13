@@ -3,13 +3,20 @@ import {lazy, useState, useEffect } from "react";
 import { getTrendMovies, getSearchMovie } from "API/services";
 
 
-const MainPage = lazy( ()=> import("./Pages/MainPage"));
-const MoviePage = lazy( ()=> import("./Pages/MoviePage"));
-const SharedLayout = lazy(() => import("./SharedLayout"));
-const MovieDetailsPage = lazy( ()=> import("./Pages/MovieDetailsPage"));
-const MovieCast = lazy( ()=> import("components/MovieCast"));
-const MovieReview = lazy( ()=> import("./MovieReview"));
+// const MainPage = lazy( ()=> import("./Pages/MainPage"));
+// const MoviePage = lazy( ()=> import("./Pages/MoviePage"));
+// const SharedLayout = lazy(() => import("./SharedLayout"));
+// const MovieDetailsPage = lazy( ()=> import("./Pages/MovieDetailsPage"));
+// const MovieCast = lazy( ()=> import("components/MovieCast"));
+// const MovieReview = lazy( ()=> import("./MovieReview"));
 
+
+import MainPage from "./Pages/MainPage";
+import MoviePage from "./Pages/MoviePage";
+import SharedLayout from "./SharedLayout";
+import MovieDetailsPage from "./Pages/MovieDetailsPage";
+import MovieCast from "components/MovieCast";
+import MovieReview from "./MovieReview";
 
 
 export const App = () => {
