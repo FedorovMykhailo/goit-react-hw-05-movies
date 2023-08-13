@@ -29,7 +29,7 @@ export const getMovie = async (id) => {
     try {
         const movie = await axios.get(`https://api.themoviedb.org/3/movie/${id}?language=en-US`, options)
         // console.log("moviedata");
-        // console.log(movie.data);
+         console.log(movie.data);
         return movie.data
     } catch (error) {
         console.log(error);
