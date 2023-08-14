@@ -1,4 +1,4 @@
-import { Route, Routes, useSearchParams } from "react-router-dom";
+import { Route, Routes, Navigate, useSearchParams } from "react-router-dom";
 import { lazy, useState, useEffect } from "react";
 //import {useState, useEffect } from "react";
 import { getTrendMovies, getSearchMovie } from "API/services";
@@ -69,6 +69,7 @@ export const App = () => {
             <Route path="cast" element={<MovieCast />} />
             <Route path="review" element={<MovieReview />} />
           </Route>
+          <Route path="*" element={<Navigate to="/" replace />} />
           {/* <Route path=":id" element={<MovieDetailsPage/>} /> */}
         </Route>
       </Routes>

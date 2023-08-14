@@ -8,8 +8,11 @@ const MovieInfo = ({ movieDetailInfo }) => {
 
     const year = new Date(release_date);
     
+    const img = (!poster_path) ? `https://image.tmdb.org/t/p/original/${poster_path}` : '/default_img.jpg'
+    console.log(img);
+
     return <Wrapper>
-            <Poster src={`https://image.tmdb.org/t/p/original/${poster_path}`} alt={original_title} />
+            <Poster src={img} alt={original_title} />
             <WrapperInfo>
                 <FilmTitle>{`${original_title} (${year.getFullYear()})`}</FilmTitle>
                 <Info>{`User score ${Math.ceil(vote_average*10)} %`}</Info>
