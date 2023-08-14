@@ -1,4 +1,5 @@
-import { Poster, Wrapper, WrapperInfo, FilmTitle, Title, Info,GenreList} from "./MovieInfo.styled"
+import { Poster, Wrapper, WrapperInfo, FilmTitle, Title, Info, GenreList } from "./MovieInfo.styled";
+import PropTypes from 'prop-types';
 
 const MovieInfo = ({ movieDetailInfo }) => {
     const { original_title, release_date, poster_path, overview, vote_average, genres } = movieDetailInfo
@@ -21,3 +22,7 @@ const MovieInfo = ({ movieDetailInfo }) => {
 }
 
 export default MovieInfo
+
+MovieInfo.propTypes = {
+    movieDetailInfo: PropTypes.object
+}

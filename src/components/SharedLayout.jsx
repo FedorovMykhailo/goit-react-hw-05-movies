@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { Header } from "./SharedLayout.styled";
 
 const SharedLayout = () => {
-    console.log("shared layout");
+    // console.log("shared layout");
     return <>
         <Header>
         <Link to="/">Main</Link>
