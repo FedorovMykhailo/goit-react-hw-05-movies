@@ -19,7 +19,7 @@ const options = {
 export const getTrendMovies = async () => {
     try {
         const movies = await axios.get("https://api.themoviedb.org/3/trending/all/day?language=en-US", options)
-        console.log(movies.data); 
+        // console.log(movies.data); 
         return movies.data.results
     } catch (error) {
         console.log(error);
@@ -30,7 +30,7 @@ export const getMovie = async (id) => {
     try {
         const movie = await axios.get(`https://api.themoviedb.org/3/movie/${id}?language=en-US`, options)
         // console.log("moviedata");
-         console.log(movie.data);
+        //  console.log(movie.data);
         return movie.data
     } catch (error) {
         console.log(error);

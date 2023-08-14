@@ -48,8 +48,6 @@ export const App = () => {
         } 
   }
 
-console.log(trendMovies);
-
   return (
     <div
       style={{
@@ -62,7 +60,7 @@ console.log(trendMovies);
         // color: '#010101'
       }}
     >
-      <Routes>
+      <Routes basename="/goit-react-hw-05-movies">
         <Route path="/" element={<SharedLayout/>}>
           <Route index element={<MainPage trendMovies={trendMovies} />} />
           <Route path="/movies" element={<MoviePage  searchedMovie={searchMovie} handleSearchClick={handleSearchMovie} />} />
