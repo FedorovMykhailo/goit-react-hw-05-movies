@@ -48,6 +48,7 @@ export const App = () => {
         } 
   }
 
+
   return (
     <div
       style={{
@@ -60,7 +61,7 @@ export const App = () => {
         // color: '#010101'
       }}
     >
-      <Routes basename="/goit-react-hw-05-movies">
+      <Routes>
         <Route path="/" element={<SharedLayout/>}>
           <Route index element={<MainPage trendMovies={trendMovies} />} />
           <Route path="/movies" element={<MoviePage  searchedMovie={searchMovie} handleSearchClick={handleSearchMovie} />} />
