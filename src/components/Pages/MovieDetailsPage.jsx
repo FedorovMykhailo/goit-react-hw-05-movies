@@ -13,7 +13,7 @@ const MovieDetailsPage = () =>
 
   const backLink = location.state?.from
     
-useEffect(()=>{handleMovie(id)},[id])
+  useEffect(()=>{handleMovie(id)},[id])
   
   const handleMovie = async (id) => {
       try {

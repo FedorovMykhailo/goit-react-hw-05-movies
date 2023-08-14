@@ -4,13 +4,16 @@ import SearchMovieBox from "components/SearchMovieBox";
 import MovieList from "components/MovieList";
 import PropTypes from 'prop-types';
 
-const MoviePage = ( { searchedMovie, handleSearchClick} ) => {
+const MoviePage = ( { searchedMovie, handleSearchClick, handleSaveSearch, handleGetSearch } ) => {
 
     return <>
-    <SearchMovieBox handleSearch={handleSearchClick} />
+        <SearchMovieBox
+            handleSearch={handleSearchClick}
+            handleSaveMovie={handleSaveSearch}
+            handleGetMovie = {handleGetSearch}
+        />
    { searchedMovie&&<MovieList movies={searchedMovie}/>}
    </>
-
 }
 
 export default MoviePage

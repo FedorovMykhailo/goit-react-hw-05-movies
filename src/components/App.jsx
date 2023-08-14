@@ -24,10 +24,12 @@ export const App = () => {
 
   const [trendMovies, setTrendMovies] = useState([])
   const [searchMovie, setSearchMovie] = useState([])
+  const [saveSearcMovie, setSaveSearcMovie] = useState("")
   const [searchParams, setSearchParams] = useSearchParams();
   console.log(searchParams);
 
-  useEffect(()=>{ handleTrendMovies()},[])
+  useEffect(() => { handleTrendMovies() }, [])
+  //useEffect(() => { setSaveSearcMovie("") }, [])
   
   const handleTrendMovies = async () => {
         try {
@@ -48,7 +50,16 @@ export const App = () => {
         } 
   }
 
+    const handleSaveSearchMovie =  (searchQuery) => {
+         setSaveSearcMovie(searchQuery)
+        } 
 
+    const handlGetSearchMovie =  () => {
+         return saveSearcMovie   
+    }
+
+  
+  
   return (
     <div
       style={{
@@ -64,7 +75,11 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<SharedLayout/>}>
           <Route index element={<MainPage trendMovies={trendMovies} />} />
-          <Route path="/movies" element={<MoviePage  searchedMovie={searchMovie} handleSearchClick={handleSearchMovie} />} />
+          <Route path="/movies" element={<MoviePage
+            searchedMovie={searchMovie}
+            handleSearchClick={handleSearchMovie}
+            handleSaveSearch={handleSaveSearchMovie}
+            handleGetSearch={handlGetSearchMovie } />} />
           <Route path="movies/:id" element={<MovieDetailsPage />}>
             <Route path="cast" element={<MovieCast />} />
             <Route path="review" element={<MovieReview />} />

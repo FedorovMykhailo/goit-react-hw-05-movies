@@ -20,9 +20,9 @@ const MovieCast = () => {
     }
 
     const actors = cast?.map(({ id, name, profile_path }) => {
-        const img = (profile_path) ? `https://image.tmdb.org/t/p/original/${profile_path}` : '../../src/components/images/default_img.jpg'
-    console.log(img);
-        return <li key = {id}>
+    const img = (profile_path) ? `https://image.tmdb.org/t/p/original/${profile_path}` : require('../../src/components/images/default_img.jpg')
+        
+    return <li key={id}>
                 <p>{name}</p>
                 <Foto src = {img} alt={name}/>
             </li>

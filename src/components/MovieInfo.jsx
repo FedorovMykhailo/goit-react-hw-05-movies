@@ -8,8 +8,7 @@ const MovieInfo = ({ movieDetailInfo }) => {
 
     const year = new Date(release_date);
     
-    const img = (!poster_path) ? `https://image.tmdb.org/t/p/original/${poster_path}` : '/default_img.jpg'
-    console.log(img);
+    const img = (poster_path) ? `https://image.tmdb.org/t/p/original/${poster_path}` : require('../components/images/default.jpg')
 
     return <Wrapper>
             <Poster src={img} alt={original_title} />
